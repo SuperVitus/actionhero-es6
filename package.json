@@ -1,0 +1,34 @@
+{
+  "author": "YOU <YOU@example.com>",
+  "name": "my_actionhero_project",
+  "description": "my actionhero project",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "actionhero": "^10.1.1",
+    "ah-bookshelf-plugin": "^0.0.4",
+    "grunt": "^0.4.5",
+    "ws": "^0.7.1"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-changed": "^1.1.1",
+    "gulp-eslint": "^0.7.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-sourcemaps": "^1.5.1",
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
+  },
+  "scripts": {
+    "help": "actionhero help",
+    "start": "ACTIONHERO_CONFIG=dist/config actionhero start",
+    "startCluster": "ACTIONHERO_CONFIG=dist/config actionhero startCluster",
+    "test": "mocha",
+    "watch": "gulp"
+  }
+}
