@@ -14,6 +14,9 @@ var paths = {
 
 gulp.task('babel', ['lint'], function() {
   return gulp.src(paths.src)
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(changed(paths.dest))
@@ -25,6 +28,9 @@ gulp.task('babel', ['lint'], function() {
 
 gulp.task('lint', function() {
   return gulp.src(paths.src)
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(changed(paths.dest))
     .pipe(eslint({useEslintrc: true}))
     .pipe(eslint.format())
